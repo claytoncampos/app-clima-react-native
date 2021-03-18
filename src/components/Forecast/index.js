@@ -1,11 +1,16 @@
 import React from 'react';
-import { Vibration, Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+
+import { condition } from '../../utils/condition';
+
 export default function Forecast({ data }) {
+  let icon = condition(data.condition);
+
   return (
     <View style={styles.container}>
       <Text style={styles.date}>{data.date}</Text>
-      <Ionicons name="rainy-outline" color="#1ec9ff" size={25} />
+      <Ionicons name={icon.name} color={icon.color} size={25} />
       <View style={styles.temp}>
         <Text>{data.min}</Text>
         <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{data.max}</Text>

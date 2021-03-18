@@ -21,7 +21,7 @@ const mylist = [
     max: 27,
     min: 18,
     description: 'Tempestades',
-    condition: 'storm',
+    condition: 'clear_day',
   },
   {
     date: '17/03',
