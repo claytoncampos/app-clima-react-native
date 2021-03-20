@@ -68,7 +68,7 @@ export default function Search() {
           <Text style={styles.date}>{city.results.date}</Text>
           <Text style={styles.city}>{city.results.city_name}</Text>
           <View>
-            <Text style={styles.temp}>{city.results.temp}</Text>
+            <Text style={styles.temp}>{city.results.temp}º</Text>
           </View>
 
           <Conditions weather={city.results} />
@@ -148,9 +148,24 @@ const styles = StyleSheet.create({
   header: {
     marginTop: '5%',
     width: '90%',
-    paddingTop: '3%',
-    paddingBottom: '3%',
+    paddingTop: '5%',
+    paddingBottom: '5%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 8,
+  },
+  date: {
+    color: '#fff',
+    fontSize: 16,
+  },
+  city: {
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  temp: {
+    color: '#fff',
+    fontSize: 90,
+    fontWeight: 'bold',
   },
 });
-
-// 58m aula 3

@@ -12,8 +12,8 @@ export default function Forecast({ data }) {
       <Text style={styles.date}>{data.date}</Text>
       <Ionicons name={icon.name} color={icon.color} size={25} />
       <View style={styles.temp}>
-        <Text>{data.min}</Text>
-        <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{data.max}</Text>
+        <Text>{data.min}º</Text>
+        <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{data.max}º</Text>
       </View>
     </View>
   );
@@ -38,5 +38,3 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
-
-//1h:16m aula 2

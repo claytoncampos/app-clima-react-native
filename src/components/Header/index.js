@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { Ionicons } from '@expo/vector-icons';
@@ -13,7 +13,7 @@ export default function Header({ weather, icon, background }) {
 
       <Ionicons name={icon.name} color={icon.color} size={150} />
 
-      <Text style={styles.temp}>{weather.temp}</Text>
+      <Text style={styles.temp}>{weather.temp}º</Text>
     </LinearGradient>
   );
 }
@@ -46,5 +46,3 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
 });
-
-//falta consumir api

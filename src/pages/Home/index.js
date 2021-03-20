@@ -123,7 +123,7 @@ export default function Home() {
       setWeather(response.data.results);
       console.log(weather);
 
-      //verificar se esta de dia ou noite (mduar background)
+      //verificar se esta de dia ou noite (mudar background)
       if (response.data.results.currently === 'noite') {
         setBackground(['#0c3741', '#0f2f61']);
       }
@@ -160,6 +160,7 @@ export default function Home() {
       <Header weather={weather} icon={icon} background={background} />
       <Conditions weather={weather} />
       <FlatList
+        showsHorizontalScrollIndicator={false}
         horizontal={true}
         contentContainerStyle={{ paddingBottom: '5%' }}
         style={styles.list}
